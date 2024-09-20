@@ -1,0 +1,30 @@
+.header {
+  background-color: rgb(28, 234, 234);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  @media screen and (max-width: 768px) {
+    font-size: 15px;
+    background-color: #415078;
+  }
+
+  li {
+    font-size: 20px;
+    @media screen and (max-width: 768px) {
+      color: rgb(241, 245, 7);
+      font-size: 15px;
+    }
+    margin: 0;
+    &:hover {
+      color: rgb(13, 0, 255);
+    }
+  }
+}
+
+.style {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+}
