@@ -1,0 +1,14 @@
+.list {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.liList {
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+}
