@@ -22,7 +22,7 @@
   border-radius: 5%;
   overflow: hidden;
   &:hover {
-    transform: translateX(5%) rotate(360deg);
+    transform: translateX(5%);
   }
 }
 .imgCard1 {
@@ -33,7 +33,7 @@
   border-radius: 5%;
   overflow: hidden;
   &:hover {
-    transform: translateX(5%) rotate(360deg);
+    transform: translateX(5%);
   }
 }
 
