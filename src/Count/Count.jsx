@@ -1,11 +1,24 @@
 import s from "./Count.module.css";
 import { clsx } from "clsx";
 
-const Count = ({ handlePlus, handleMinus, handleReset, count }) => {
+const Count = ({
+  handlePlus,
+  handleMinus,
+  handleReset,
+  count,
+  step,
+  setStep,
+}) => {
   return (
-    <div className={clsx}>
+    <div className={s.corob}>
       <div className={s.litleCorob}>
-        <p className={s.numeric}>{count}</p>
+        <p className={clsx(count >= 0 ? s.numeric : s.red)}>{count}</p>
+        <input
+          className={s.input}
+          type="number"
+          value={step}
+          onChange={(e) => setStep(Number(e.target.value))}
+        />
         <div className={s.proList}>
           <button onClick={handleMinus} type="button" className={s.list}>
             Minus

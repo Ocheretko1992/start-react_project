@@ -10,19 +10,21 @@ import Count from "./../Count/Count";
 import { useState } from "react";
 
 const App = () => {
-  const [count, setCount] = useState(66);
+  const [count, setCount] = useState(0);
+  const [step, setStep] = useState(0);
 
   const age = 18;
 
   const handlePlus = () => {
-    setCount(count + 1);
+    setCount((prev) => prev + step);
   };
 
   const handleMinus = () => {
-    setCount(count - 1);
+    setCount((prev) => prev - step);
   };
   const handleReset = () => {
     setCount(0);
+    setStep(1);
   };
 
   return (
@@ -45,6 +47,8 @@ const App = () => {
         handleMinus={handleMinus}
         handleReset={handleReset}
         count={count}
+        step={step}
+        setStep={setStep}
       />
     </div>
   );
