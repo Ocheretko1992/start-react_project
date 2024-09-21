@@ -1,3 +1,16 @@
+.divList {
+  width: 100%;
+  padding: 300px 15px;
+  border: 2px solid black;
+  transition: all 2s;
+}
+
+.colorH1 {
+  display: flex;
+  justify-content: center;
+  color: black;
+}
+
 .list {
   display: flex;
   justify-content: center;
@@ -8,8 +21,16 @@
 }
 
 .liList {
+  cursor: pointer;
+  transition: all 0.4s;
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 400;
   display: flex;
-  color: darkorange;
+  color: black;
+  padding: 5px 5px;
+  border: 2px solid black;
+  border-radius: 5px;
+  &:hover {
+    background-color: #fff;
+  }
 }

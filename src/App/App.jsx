@@ -12,6 +12,7 @@ import { useState } from "react";
 const App = () => {
   const [count, setCount] = useState(0);
   const [step, setStep] = useState(0);
+  const [carrentColor, setCarrentColor] = useState("wite");
 
   const age = 18;
 
@@ -27,6 +28,10 @@ const App = () => {
     setStep(1);
   };
 
+  const handleColor = (color) => {
+    setCarrentColor(color);
+  };
+
   return (
     <div>
       <Header />
@@ -40,7 +45,11 @@ const App = () => {
       ) : (
         <Section />
       )}
-      <TodoList colors={colors} />
+      <TodoList
+        colors={colors}
+        handleColor={handleColor}
+        carrentColor={carrentColor}
+      />
       <User users={Users} />
       <Count
         handlePlus={handlePlus}
