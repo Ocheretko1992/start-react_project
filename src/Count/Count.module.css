@@ -5,7 +5,7 @@
   justify-content: center;
   border-radius: 5px;
   margin: 100px auto 200px;
-  padding: 75px 0 20px;
+  padding: 50px 0 20px;
 }
 
 .litleCorob {
@@ -19,11 +19,12 @@
   justify-content: center;
   align-items: center;
   color: red;
-  height: 70px;
-  margin: 0 auto 45px;
+  height: 100px;
+  margin: 0 auto 35px;
   border-radius: 5px;
   font-size: 100px;
   font-weight: 600;
+  width: 100%;
 }
 
 .numeric {
@@ -31,11 +32,12 @@
   justify-content: center;
   align-items: center;
   color: chartreuse;
-  height: 70px;
-  margin: 0 auto 60px;
+  height: 100px;
+  margin: 0 auto 35px;
   border-radius: 5px;
   font-size: 100px;
   font-weight: 600;
+  width: 100%;
 }
 
 .proList {
