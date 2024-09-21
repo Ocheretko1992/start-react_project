@@ -1,13 +1,13 @@
 [
   { "id": 1, "color": "Yellow" },
   { "id": 2, "color": "Pink" },
-  { "id": 3, "color": "lawngreen" },
+  { "id": 3, "color": "Lawngreen" },
   { "id": 4, "color": "Red" },
   { "id": 9, "color": "Orange" },
   { "id": 11, "color": "Turquoise" },
   { "id": 12, "color": "Gold" },
   { "id": 13, "color": "Silver" },
   { "id": 17, "color": "Pink" },
-  { "id": 18, "color": "lime" },
-  { "id": 19, "color": "aqua" }
+  { "id": 18, "color": "Lime" },
+  { "id": 19, "color": "Aqua" }
 ]
