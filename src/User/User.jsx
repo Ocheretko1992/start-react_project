@@ -1,14 +1,13 @@
 import clsx from "clsx";
 import s from "./User.module.css";
-import { nanoid } from "nanoid";
 
 const User = ({ users }) => {
   return (
     <div className={s.card}>
       <ul className={s.img}>
-        {users.map(({ img, username, lastName, email, birthYear }) => (
+        {users.map(({ id, img, username, lastName, email, birthYear }) => (
           <li
-            key={nanoid}
+            key={id}
             className={clsx(birthYear < 1990 ? s.imgCard1 : s.imgCard)}>
             <img
               src={img}

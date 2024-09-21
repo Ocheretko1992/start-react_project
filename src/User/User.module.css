@@ -22,7 +22,7 @@
   border-radius: 5%;
   overflow: hidden;
   &:hover {
-    transform: translateX(6%);
+    transform: scale(01.05);
   }
 }
 .imgCard1 {
@@ -33,7 +33,7 @@
   border-radius: 5%;
   overflow: hidden;
   &:hover {
-    transform: translateX(6%);
+    transform: scale(01.05);
   }
 }
 

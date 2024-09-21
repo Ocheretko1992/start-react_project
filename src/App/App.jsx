@@ -6,9 +6,25 @@ import colors from "../Color.json";
 import User from "../User/User";
 import Users from "../Users.json";
 import "../index.css";
+import Count from "./../Count/Count";
+import { useState } from "react";
 
 const App = () => {
+  const [count, setCount] = useState(66);
+
   const age = 18;
+
+  const handlePlus = () => {
+    setCount(count + 1);
+  };
+
+  const handleMinus = () => {
+    setCount(count - 1);
+  };
+  const handleReset = () => {
+    setCount(0);
+  };
+
   return (
     <div>
       <Header />
@@ -24,6 +40,12 @@ const App = () => {
       )}
       <TodoList colors={colors} />
       <User users={Users} />
+      <Count
+        handlePlus={handlePlus}
+        handleMinus={handleMinus}
+        handleReset={handleReset}
+        count={count}
+      />
     </div>
   );
 };
