@@ -8,6 +8,7 @@ import Users from "../Users.json";
 import "../index.css";
 import Count from "./../Count/Count";
 import { useState } from "react";
+import FilterTodoList from "../FilterTodoList/FilterTodoList";
 
 const App = () => {
   const [count, setCount] = useState(0);
@@ -59,6 +60,7 @@ const App = () => {
         step={step}
         setStep={setStep}
       />
+      <FilterTodoList />
     </div>
   );
 };

@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "title": "Прибрати кімнату",
+    "completed": false
+  },
+  {
+    "id": 2,
+    "title": "Приготувати обід",
+    "completed": false
+  },
+  {
+    "id": 3,
+    "title": "Прочитати книгу",
+    "completed": true
+  }
+]
