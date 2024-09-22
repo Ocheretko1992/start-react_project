@@ -16,6 +16,7 @@ const FilterTodoList = () => {
     const newTodo = { title: newTodoValue, id: nanoid() };
     console.log(newTodo);
     setTodos((prev) => [...prev, newTodo]);
+    setNewTodoValue("");
   };
 
   return (

@@ -8,6 +8,7 @@
 .input {
   padding: 10px 10px;
   border: 2px solid black;
+  border-radius: 4px;
 }
 
 .btnAdd {
@@ -15,6 +16,7 @@
   width: 100px;
   font-size: 26px;
   border: 2px solid black;
+  border-radius: 4px;
 }
 
 .ulList {
@@ -32,6 +34,7 @@
   display: flex;
   border: 2px solid black;
   padding: 10px 20px;
+  border-radius: 4px;
 }
 
 .span {
