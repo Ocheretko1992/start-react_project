@@ -11,7 +11,18 @@ import { useState } from "react";
 import FilterTodoList from "../FilterTodoList/FilterTodoList";
 
 const App = () => {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(() => {
+  //   const saveCount = JSON.parse(window.localStorage.getItem("count"));
+  //   if (saveCount !== null) {
+  //     return saveCount;
+  //   }
+  //   return 0;
+  // });
+
+  const [count, setCount] = useState(
+    JSON.parse(window.localStorage.getItem("count")) ?? 0
+  );
+
   const [step, setStep] = useState(0);
   const [carrentColor, setCarrentColor] = useState("wite");
 

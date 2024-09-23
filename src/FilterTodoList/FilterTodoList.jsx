@@ -2,11 +2,22 @@ import { nanoid } from "nanoid";
 import css from "./FilterTodoList.module.css";
 import LiTodo from "./LiTodo";
 import TodosData from "./todo.json";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const FilterTodoList = () => {
-  const [todos, setTodos] = useState(TodosData);
+  const [todos, setTodos] = useState(() => {
+    const saveData = JSON.parse(window.localStorage.getItem("todos"));
+    if (saveData?.length) {
+      return saveData;
+    }
+    return TodosData;
+  });
+
   const [newTodoValue, setNewTodoValue] = useState("");
+
+  useEffect(() => {
+    window.localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
 
   const handleDeleteTodo = (id) => {
     setTodos((prev) => prev.filter((item) => item.id !== id));

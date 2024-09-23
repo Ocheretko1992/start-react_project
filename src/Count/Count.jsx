@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import s from "./Count.module.css";
 import { clsx } from "clsx";
 
@@ -9,6 +10,14 @@ const Count = ({
   step,
   setStep,
 }) => {
+  useEffect(() => {
+    console.log("Hello Oleh", count);
+  }, [count]);
+
+  useEffect(() => {
+    window.localStorage.setItem("count", count);
+  }, [count]);
+
   return (
     <div className={s.corob}>
       <div className={s.litleCorob}>
