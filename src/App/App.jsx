@@ -9,24 +9,20 @@ import "../index.css";
 import Count from "./../Count/Count";
 import { useState } from "react";
 import FilterTodoList from "../FilterTodoList/FilterTodoList";
+import Modal from "./../Modal/Modal";
 
 const App = () => {
-  // const [count, setCount] = useState(() => {
-  //   const saveCount = JSON.parse(window.localStorage.getItem("count"));
-  //   if (saveCount !== null) {
-  //     return saveCount;
-  //   }
-  //   return 0;
-  // });
-
   const [count, setCount] = useState(
     JSON.parse(window.localStorage.getItem("count")) ?? 0
   );
-
   const [step, setStep] = useState(0);
   const [carrentColor, setCarrentColor] = useState("wite");
+  const [modal, setModal] = useState(false);
 
   const age = 18;
+
+  const openeModal = () => setModal(true);
+  const closeModal = () => setModal(false);
 
   const handlePlus = () => {
     setCount((prev) => prev + step);
@@ -72,6 +68,14 @@ const App = () => {
         setStep={setStep}
       />
       <FilterTodoList />
+
+      <button onClick={openeModal}>Open Modal</button>
+
+      {modal && (
+        <Modal closeModal={closeModal}>
+          <p>Продам Теслу</p>
+        </Modal>
+      )}
     </div>
   );
 };
